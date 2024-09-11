@@ -1,0 +1,436 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: yellow;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color:yellow ; 
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .subnav {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color:white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .subnav:hover .subnavbtn {
+    background-color:gray;
+  }
+  
+
+  .subnav-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color:gray;
+    z-index: 1;
+    padding: 5px 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  }
+  
+  .subnav-content a {
+    float: none;
+    color: black;
+    padding: 5px 6px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+  }
+  
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+    */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color:gray;
+    text-decoration:yellow;
+    font-weight: bold;
+    font-size: medium;
+}
+.free{
+    background-color: yellow;
+    color:black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+/* Popup container common styles */
+.popup-notification {
+    position: fixed;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: black;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.5s ease;
+  }
+
+  /* Notification 1 (Top-Right corner) */
+  .popup1 {
+    bottom:  20px;
+    right: 20px;
+    animation: showPopup 1s forwards 0.5s, hidePopup 1s forwards 5s;
+  }
+  
+  /* Notification 2 (Bottom-Left corner) */
+  .popup2 {
+    bottom:  20px;
+    left: 20px;
+    animation: showPopup 1s forwards 2s, hidePopup 1s forwards 7s;
+  }
+  
+  /* Popup content styling */
+  .popup-content h1 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color:white;
+  }
+  
+  .popup-content p {
+    font-size: 14px;
+    color:white;
+  }
+   /* Keyframes for appearing */
+   @keyframes showPopup {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Keyframes for disappearing */
+  @keyframes hidePopup {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+  
+
+
+/* Video Background Styling */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keep it behind the text content */
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* To position the video behind the content */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Ensures that the video doesn't overflow */
+}
+
+.hero-content {
+    z-index: 1; /* Keep the text in front of the video */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero-content .cta {
+    background-color: #FFD700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*get started*/
+
+body {font-family: Arial, Helvetica, sans-serif;}
+                * {box-sizing: border-box;}
+                
+                /* Full-width input fields */
+                input[type=text], input[type=password] {
+                  width: 100%;
+                  padding: 15px;
+                  margin: 5px 0 22px 0;
+                  display: inline-block;
+                  border: none;
+                
+                }
+                
+                                
+                /* Add a background color when the inputs get focus */
+                input[type=text]:focus, input[type=password]:focus {
+                
+                  outline: none;
+                }
+                
+                /* Set a style for all buttons */
+                button {
+                  background-color: yellow;
+                  color:black;
+                  padding: 14px 20px;
+                  margin: 8px 0;
+                  border: none;
+                  cursor: pointer;
+                  width: 100%;
+                  opacity: 0.9;
+                }
+                
+                button:hover {
+                  opacity:1;
+                }
+                
+                /* Extra styles for the cancel button */
+                .cancelbtn {
+                  padding: 14px 20px;
+                  background-color: #f44336;
+                }
+                
+                /* Float cancel and signup buttons and add an equal width */
+                .cancelbtn, .signupbtn {
+                  float: left;
+                  width: 50%;
+                }
+                .container2 {
+                  padding: 16px;
+                  background-color: gray;
+                  color: black;
+                }
+                
+                
+                /* Add padding to container elements */
+                .container {
+                  padding: 16px;
+                }
+
+                
+                /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  z-index: 1; /* Sit on top */
+                  left: 0;
+                  top: 0;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: #474e5d;
+                  padding-top: 50px;
+                }
+                
+                /* Modal Content/Box */
+                .modal-content {
+                  background-color: #fefefe;
+                  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                  border: 1px solid #888;
+                  width: 80%; /* Could be more or less, depending on screen size */
+                }
+                
+                /* Style the horizontal ruler */
+                hr {
+                  border: 1px solid #f1f1f1;
+                  margin-bottom: 25px;
+                }
+                 
+                /* The Close Button (x) */
+                .close {
+                  position: absolute;
+                  right: 35px;
+                  top: 15px;
+                  font-size: 40px;
+                  font-weight: bold;
+                  color: #f1f1f1;
+                }
+                
+                .close:hover,
+                .close:focus {
+                  color: #f44336;
+                  cursor: pointer;
+                }
+                
+                /* Clear floats */
+                .clearfix::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+                
+                /* Change styles for cancel button and signup button on extra small screens */
+                @media screen and (max-width: 300px) {
+                  .cancelbtn, .signupbtn {
+                     width: 100%;
+                  }
+                }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+    background-color: #f1f1f1;
+            padding: 20px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-logo img {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center; /* Align center horizontally */
+            align-items: center;
+            gap: 15px; /* Space between icons */
+        }
+
+        .social-media a {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .fa-facebook-f{
+            color: #00BFFF;
+            position: absolute, left="50%";
+            padding-left: 20;
+        }
+        .fa-instagram{
+            color: deeppink;
+            text-align: center;
+            align-items: center;
+        }
+        .fa-whatsapp{
+            color: green;
+        }
+
+        .social-media a:hover {
+            color: #00BFFF; /* Change color on hover */
+        }
+
+        /* Subscribe Form */
+        .
+
+
+        .footer-links {
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            color: #00BFFF;
+        }
+
+
+/* Mobile fallback for the background video */
+@media (max-width: 768px) {
+    #bg-video {
+        display: none; /* Hide the video on mobile devices */
+    }
+
+    .hero {
+        background: url('background.jpg') no-repeat center center/cover; /* Fallback image */
+    }
+}
